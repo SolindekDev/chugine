@@ -1,2 +1,2 @@
 # chugine
-Chugine is 3d game engine made in C
+Chugine is 2d game engine made in C
