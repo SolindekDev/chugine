@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.asm": "barn",
+        "chugine_init.h": "c",
+        "chugine.h": "c"
+    }
+}
