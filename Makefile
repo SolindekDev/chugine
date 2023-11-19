@@ -50,4 +50,7 @@ $(LIB_DIR)/%.o: $(SRC_DIR)/%.c
 clean:
 	rm -f $(LIBRARY) $(OBJ_FILES)
 
+install:
+	sudo cp -r ./lib/chugine.so /usr/lib/
+
 .PHONY: all clean

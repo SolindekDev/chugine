@@ -3,6 +3,9 @@
         "*.asm": "barn",
         "chugine_init.h": "c",
         "chugine.h": "c",
-        "chugine_window.h": "c"
+        "chugine_window.h": "c",
+        "chugine_screen.h": "c",
+        "stdbool.h": "c",
+        "chugine_vector.h": "c"
     }
 }
