@@ -2,8 +2,11 @@
 #define _CHUGINE_H
 
 #include <chugine_init.h>
+#include <chugine_window.h>
 
-#define CHUGINE_RETURN_CODE unsigned char
+#include <GLUT/glut.h>
+
+typedef unsigned char CHUGINE_RETURN_CODE;
 
 #define CHUGINE_SUCCESS 1
 #define CHUGINE_ERROR   0

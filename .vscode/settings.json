@@ -2,6 +2,7 @@
     "files.associations": {
         "*.asm": "barn",
         "chugine_init.h": "c",
-        "chugine.h": "c"
+        "chugine.h": "c",
+        "chugine_window.h": "c"
     }
 }

@@ -1,11 +1,10 @@
 #include <chugine.h>
 
-#include <chugine_init.h>
-
 CHUGINE_RETURN_CODE
-chugine_engine_init()
+chugine_engine_init(int argc, char** argv)
 {
     /* Init glut and other important libraries */
+    glutInit(&argc, argv);
 
     return CHUGINE_SUCCESS;
 }

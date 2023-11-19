@@ -18,8 +18,14 @@
 
 CC = gcc
 
-CFLAGS = -Wall -Iinclude -c
-LDFLAGS = -shared
+UNAME_S := $(shell uname -s)
+ifeq ($(UNAME_S),Darwin)
+	CFLAGS = -Wall -Iinclude -c
+	LDFLAGS = -framework GLUT -framework OpenGL -framework Cocoa -shared
+else
+	CFLAGS = -Wall -Iinclude -c
+	LDFLAGS = -shared -L/usr/X11R6/lib -lGL -lGLU -lglut
+endif
 
 SRC_DIR = ./src
 LIB_DIR = ./lib
@@ -29,7 +35,10 @@ OBJ_FILES = $(patsubst $(SRC_DIR)/%.c,$(LIB_DIR)/%.o,$(SRC_FILES))
 
 LIBRARY = $(LIB_DIR)/chugine.so
 
-all: $(LIBRARY)
+all: create_lib_folder $(LIBRARY)
+
+create_lib_folder:
+	mkdir -p lib
 
 $(LIBRARY): $(OBJ_FILES)
 	make -p $(LIB_DIR)
